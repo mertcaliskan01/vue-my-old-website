@@ -43,6 +43,7 @@ export default {
         let payload = {
           id: this.task.id,
           title: this.taskTitle,
+          completed: this.task.completed,
         };
         this.$store.commit("updateTaskTitle", payload);
         this.$emit("close");

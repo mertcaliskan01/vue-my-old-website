@@ -31,7 +31,12 @@ export default {
   methods: {
     addTask() {
       if (!this.newTaskTitleInvalid) {
-        this.$store.commit("addTask", this.newTaskTitle);
+        let newTask = {
+          id: Date.now(),
+          title: this.newTaskTitle,
+          completed: false
+        }
+        this.$store.commit("addTask", newTask);
         this.newTaskTitle = "";
       }
     },

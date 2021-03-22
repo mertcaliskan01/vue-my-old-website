@@ -17,6 +17,9 @@ export default {
     "list-tasks": require("@/components/Todo/ListTasks.vue").default,
     "no-tasks": require("@/components/Todo/NoTasks.vue").default
   },
+  created() {
+    this.$store.commit("fetchTasks");
+  },
 };
 </script>
 

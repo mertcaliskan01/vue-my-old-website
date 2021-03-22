@@ -1,29 +1,22 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from 'axios'
+
+const resource_uri = 'https://jsonplaceholder.typicode.com/todos?_limit=5';
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
     tasks:[
-      {
-        id:1,
-        title:'Wake Up',
-        done: false
-      },
-      {
-        id:2,
-        title:'Get Bananas',
-        done: false
-      },
-      {
-        id:3,
-        title:'Eat Bananas',
-        done: false
-      }
+
     ]
   },
   mutations: {
+    async fetchTasks(state){
+      const response = await axios.get(resource_uri);
+      state.tasks = response.data
+    },
     addTask(state, newTaskTitle){
       let newTask = {
         id: Date.now(),
@@ -34,7 +27,7 @@ export default new Vuex.Store({
     },
     doneTask(state, id){
       let task = state.tasks.filter(task => task.id === id)[0]
-      task.done = !task.done;
+      task.completed = !task.completed;
     },
     deleteTask(state, id){
       state.tasks = state.tasks.filter(task => task.id != id)

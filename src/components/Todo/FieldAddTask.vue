@@ -36,7 +36,7 @@ export default {
           title: this.newTaskTitle,
           completed: false
         }
-        this.$store.commit("addTask", newTask);
+        this.$store.dispatch("addTask", newTask);
         this.newTaskTitle = "";
       }
     },

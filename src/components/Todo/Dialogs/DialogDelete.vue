@@ -15,7 +15,7 @@
         <v-btn text @click="$emit('close')">
           No
         </v-btn>
-        <v-btn color="red darken-1" text @click="$store.commit('deleteTask', task.id)">
+        <v-btn color="red darken-1" text @click="$store.dispatch('deleteTask', task.id)">
           Yes
         </v-btn>
       </v-card-actions>

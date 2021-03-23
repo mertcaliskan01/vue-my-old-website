@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 
-const resource_uri = 'https://jsonplaceholder.typicode.com/todos?_limit=5';
+const resource_uri = 'https://jsonplaceholder.typicode.com/todos?_limit=5'
 axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com'
 
 Vue.use(Vuex)
@@ -10,8 +10,11 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     tasks:[
-
-    ]
+    ],
+    snackbar:{
+      show: false,
+      text: ''
+    }
   },
   mutations: {
     async fetchTasks(state){
@@ -60,8 +63,30 @@ export default new Vuex.Store({
         'completed': todo.completed,
       })
     },
+    showSnackbar(state, text){
+      let timeout = 0
+      if(state.snackbar.show){
+        state.snackbar.show = false
+        timeout = 300
+      }
+      setTimeout(() => {
+        state.snackbar.show = true
+        state.snackbar.text = text
+      }, timeout);
+    },
+    hideSnackbar(state){
+      state.snackbar.show = false
+    }
   },
   actions: {
+    addTask({commit}, newTask){
+      commit('addTask', newTask)
+      commit('showSnackbar','Task added!')
+    },
+    deleteTask({commit}, id){
+      commit('deleteTask', id)
+      commit('showSnackbar','Task deleted!')
+    }
   },
   getters: {
   }

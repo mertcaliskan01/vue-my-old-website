@@ -15,7 +15,7 @@
     "serve-static": "^1.14.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
-    "vuetify": "^2.4.0",
+    "vuetify": "^2.6.3",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
@@ -31,5 +31,20 @@
     "vue-cli-plugin-vuetify": "~2.2.2",
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.7.0"
-  }
+  },
+  "description": "- You can access the project online from [link](https://vuetify-todo-app.herokuapp.com/#/).",
+  "main": "babel.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mertcaliskan01/vuetify-todo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mertcaliskan01/vuetify-todo/issues"
+  },
+  "homepage": "https://github.com/mertcaliskan01/vuetify-todo#readme"
 }

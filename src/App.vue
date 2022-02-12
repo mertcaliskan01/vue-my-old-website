@@ -6,7 +6,7 @@
         lazy-src="https://picsum.photos/id/11/10/6"
         gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
         height="200"
-        src="https://picsum.photos/1920/1080?random"
+      src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
       >
         <v-avatar size="120">
           <img src="./assets/image.jpeg" alt="Todo" />
@@ -41,16 +41,11 @@
       app
       color="primary"
       dark
-      src="https://picsum.photos/1920/1080?random"
-      height="200"
+      src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
+      height="100"
       prominent
     >
-      <template v-slot:img="{ props }">
-        <v-img
-          v-bind="props"
-          gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
-        ></v-img>
-      </template>
+
 
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 

@@ -3,11 +3,6 @@
     <v-row justify="space-around">
       <v-card width="100%">
 
-          <v-card-title class="white--text mt-8">
-            
-          </v-card-title>
-        </v-img>
-
         <v-card-text>
           <div class="font-weight-bold ml-8 mb-2">
             Project
@@ -19,16 +14,17 @@
           >
             <v-timeline-item
               v-for="message in messages"
+              :key="message.title"
               :color="message.color"
               small
             >
               <div>
                 <div class="font-weight-normal">
-                  <strong>{{ message.from }}</strong>
+                  <strong>{{ message.title }}</strong>
                 </div>
-                  <v-list-item v-for="item in message.items" :key="item.title">
+                  <v-list-item v-for="item in message.items" :key="item.content">
                     <v-list-item-content>
-                      <v-list-item-title>{{ item.title }}</v-list-item-title>
+                      <v-list-item-title>{{ item.content }}</v-list-item-title>
                     </v-list-item-content>
                   </v-list-item>
               </div>
@@ -46,38 +42,38 @@
     data: () => ({
       messages: [
         {
-          from: 'Prerequisites',
+          title: 'Prerequisites',
           items: [
-            { title: "Node Modules"},
-            { title: "Vue.js"},
+            { content: "Node Modules"},
+            { content: "Vue.js"},
           ],
           color: 'deep-purple lighten-1',
         },
         {
-          from: 'Project Setup',
+          title: 'Project Setup',
           items: [
-            { title: "First step, we need to clone backend api repo to your local machine."},
-            { title: "git clone https://github.com/mertcaliskan01/vuetify-todo.git"},
+            { content: "First step, we need to clone backend api repo to your local machine."},
+            { content: "git clone https://github.com/mertcaliskan01/vuetify-todo.git"},
           ],
           color: 'red lighten-1',
         },
         {
-          from: 'Run Project',
+          title: 'Run Project',
           items: [
-            { title: "vue ui"},
-            { title: "Tasks -> Serve -> Run task"},
+            { content: "vue ui"},
+            { content: "Tasks -> Serve -> Run task"},
           ],
           color: 'blue lighten-2',
         },
         {
-          from: 'Tech',
+          title: 'Tech',
           items: [
-            { title: "vue: 2.6.11"},
-            { title: "axios: 0.21.1"},
-            { title: "vuex: 3.4.0"},
-            { title: "vuetify: 2.6.3"},
-            { title: "vue-router: 3.2.0"},
-            { title: "express: 4.17.1"},
+            { content: "vue: 2.6.11"},
+            { content: "axios: 0.21.1"},
+            { content: "vuex: 3.4.0"},
+            { content: "vuetify: 2.6.3"},
+            { content: "vue-router: 3.2.0"},
+            { content: "express: 4.17.1"},
           ],
           color: 'green lighten-1',
         },

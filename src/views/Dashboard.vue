@@ -1,26 +1,30 @@
-
-
 <template>
   <v-responsive class="overflow-y-auto" max-height="100%">
     <div class="pa-6 text-center">
+      <v-list-item three-line>
+        <v-list-item-content>
+          <v-list-item-subtitle v-for="item in PersonalInfo" :key="item">
+            <v-list-item class="text-h6">
+              {{ item.title }}: {{ item.content }}
+              <v-btn
+                icon
+                v-if="item.showIcon"
+                :href="linkedinURL"
+                target="_blank"
+              >
+                <v-icon>
+                  {{ item.icon }}
+                </v-icon>
+              </v-btn>
+            </v-list-item>
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
       <v-row align="center">
         <v-col cols="12" md="8">
           <v-card flat>
             <v-card-text>
               <v-row class="mb-4" align="center">
-                <v-list-item three-line>
-                  <v-list-item-content>
-                    <v-list-item-subtitle
-                      v-for="item in PersonalInfo"
-                      :key="item.title"
-                    >
-                      <v-list-item>
-                        {{ item.title }}
-                      </v-list-item>
-                    </v-list-item-subtitle>
-                  </v-list-item-content>
-                </v-list-item>
-
                 <v-spacer></v-spacer>
                 <v-btn icon>
                   <v-icon>mdi-account</v-icon>
@@ -61,6 +65,7 @@
         <v-col cols="12" md="4">
           <v-parallax
             src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+            alt="parallax"
           ></v-parallax>
         </v-col>
       </v-row>
@@ -94,20 +99,40 @@
         </v-card>
       </v-lazy>
     </v-responsive>
+
+      <footer-section/>
+
   </v-responsive>
 </template>
 
 <script>
 export default {
   data: () => ({
-    length: 3,
-    window: 0,
-    selectedItem: 1,
     PersonalInfo: [
-      { title: "Dashboard", icon: "mdi-format-list-checks" },
-      { title: "About", icon: "mdi-help-box" },
-      { title: "Todo", icon: "mdi-check-circle" },
+      {
+        title: "Telefon",
+        content: "(+90) 507 713 86 70",
+        showIcon: false,
+        icon: "",
+      },
+      {
+        title: "E-Posta",
+        content: "mcaliskanmert@gmail.com",
+        showIcon: false,
+        icon: "",
+      },
+      {
+        title: "Linkedin",
+        content: "",
+        showIcon: true,
+        icon: "mdi-linkedin",
+      },
     ],
+    linkedinURL: "https://www.linkedin.com",
+    links: ["Home", "About Us", "Team", "Services", "Blog", "Contact Us"],
   }),
+  components: {
+    "footer-section": require("../components/Footers/Footer.vue").default
+  },
 };
-</script> 
+</script>

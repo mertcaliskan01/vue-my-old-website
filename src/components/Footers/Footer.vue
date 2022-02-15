@@ -1,20 +1,20 @@
 <template>
   <v-footer padless>
     <v-row no-gutters justify="space-around">
-      <v-btn v-for="link in links" :key="link" text rounded class="my-5">
+      <v-div v-for="link in links" :key="link" class="my-5">
         <v-list-item three-line>
           <v-list-item-content>
-            <v-list-item-subtitle>
+            <v-list-item-subtitle align="center">
               <v-list-item class="text-h6">
                 {{ link.title }}
               </v-list-item>
               <v-btn
                 icon
-                v-if="link.showIcon"
                 :href="linkedinURL"
                 target="_blank"
+                v-if="link.showIcon"
               >
-                <v-icon>
+                <v-icon color="blue darken-3" x-large>
                   {{ link.icon }}
                 </v-icon>
               </v-btn>
@@ -24,7 +24,7 @@
             </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
-      </v-btn>
+      </v-div>
       <v-col class="py-4 text-center" cols="12">
         {{ new Date().getFullYear() }}
       </v-col>
@@ -55,6 +55,8 @@ export default {
         icon: "mdi-linkedin",
       },
     ],
+    linkedinURL: "https://www.linkedin.com",
   }),
 };
 </script>
+

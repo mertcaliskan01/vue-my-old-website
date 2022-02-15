@@ -12,7 +12,7 @@
                 :href="linkedinURL"
                 target="_blank"
               >
-                <v-icon>
+                <v-icon large>
                   {{ item.icon }}
                 </v-icon>
               </v-btn>
@@ -63,45 +63,16 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="4">
-          <v-parallax
-            src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-            alt="parallax"
-          ></v-parallax>
+          <v-img src="../assets/softwaresystem.png" alt="parallax"></v-img>
         </v-col>
       </v-row>
     </div>
 
-    <v-responsive height="200vh" class="text-center pa-2">
-      <v-responsive min-height="50vh"></v-responsive>
-      <div class="text-center text-body-2 mb-12">
-        The card will appear below:
-      </div>
+    <experiences-section :model="experienceModel" />
 
-      <v-lazy
-        v-model="isActive"
-        :options="{
-          threshold: 0.5,
-        }"
-        min-height="200"
-        transition="fade-transition"
-      >
-        <v-card class="mx-auto" max-width="336">
-          <v-card-title>Card title</v-card-title>
+    <experiences-section :model="educationModel" />
 
-          <v-card-text>
-            Phasellus magna. Quisque rutrum. Nunc egestas, augue at pellentesque
-            laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.
-            Aliquam lobortis. Quisque libero metus, condimentum nec, tempor a,
-            commodo mollis, magna. In turpis. In dui magna, posuere eget,
-            vestibulum et, tempor auctor, justo. In turpis. Pellentesque dapibus
-            hendrerit tortor. Ut varius tincidunt libero.
-          </v-card-text>
-        </v-card>
-      </v-lazy>
-    </v-responsive>
-
-      <footer-section/>
-
+    <footer-section />
   </v-responsive>
 </template>
 
@@ -130,9 +101,66 @@ export default {
     ],
     linkedinURL: "https://www.linkedin.com",
     links: ["Home", "About Us", "Team", "Services", "Blog", "Contact Us"],
+
+    experienceModel: {
+      header: "DENEYİM",
+      experiences: [
+        {
+          title: "deneyim1",
+          items: [{ content: "deneyim1" }, { content: "deneyim1" }],
+          color: "grey darken-2",
+        },
+        {
+          title: "deneyim2",
+          items: [
+            {
+              content: "deneyim2",
+            },
+            {
+              content: "deneyim2",
+            },
+          ],
+          color: "grey darken-2",
+        },
+        {
+          title: "deneyim3",
+          items: [{ content: "deneyim3" }, { content: "deneyim3" }],
+          color: "grey darken-2",
+        },
+      ],
+    },
+    educationModel: {
+      header: "EĞİTİM",
+      experiences: [
+        {
+          title: "eğitim1",
+          items: [{ content: "eğitim1" }, { content: "eğitim1" }],
+          color: "grey darken-2",
+        },
+        {
+          title: "eğitim2",
+          items: [
+            {
+              content: "eğitim2",
+            },
+            {
+              content: "eğitim2",
+            },
+          ],
+          color: "grey darken-2",
+        },
+        {
+          title: "eğitim3",
+          items: [{ content: "eğitim3" }, { content: "eğitim3" }],
+          color: "grey darken-2",
+        },
+      ],
+    },
   }),
   components: {
-    "footer-section": require("../components/Footers/Footer.vue").default
+    "footer-section": require("../components/Footers/Footer.vue").default,
+    "experiences-section": require("../components/Experiences/Experiences.vue")
+      .default,
   },
 };
 </script>

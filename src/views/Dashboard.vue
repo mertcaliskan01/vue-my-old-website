@@ -25,15 +25,12 @@
           <v-card flat>
             <v-card-text>
               <h3>
-                Hello, my name is Matt Lemanski. I am the creator of Speaking of English, 
-                a blog for intermediate English learners who want to become more fluent 
-                in the language. I am originally from the United States and I currently 
-                live in Germany. I have been a teacher since 2008, and specialize in 
-                business writing and IELTS preparation. Before becoming a teacher, I 
-                worked as a copyeditor for government agencies in Washington DC and 
-                as a ghostwriter for startup founders and independent consultants 
-                around the world. In my free time, I enjoy hiking, practicing photography, 
-                and exploring the city by bike.
+                Hello, my name is Mert Çalışkan. I am originally from the Turkey and I currently 
+                live in İzmir. I graduated from Celal Bayar University as a Computer Engineer.
+                I have been a developer since 2019, and specialize in Mobile
+                Application Development. Before becoming a Mobile Developer, I worked as a 
+                Software Test Engineer. In my free time, I enjoy fishing, cycling, swimming, 
+                practicing coding and learning the new technologies.
               </h3>
             </v-card-text>
           </v-card>

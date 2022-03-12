@@ -39,7 +39,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="4">
-          <v-img src="../assets/softwaresystem.png" alt="parallax"></v-img>
+          <v-img src="../assets/profile-icon-background.jpg" alt="parallax"></v-img>
         </v-col>
       </v-row>
     </div>
@@ -84,7 +84,7 @@ export default {
         {
           title: "deneyim1",
           items: [{ content: "deneyim1" }, { content: "deneyim1" }],
-          color: "grey darken-2",
+          color: "deep-orange lighten-2",
         },
         {
           title: "deneyim2",
@@ -96,12 +96,12 @@ export default {
               content: "deneyim2",
             },
           ],
-          color: "grey darken-2",
+          color: "deep-orange lighten-2",
         },
         {
           title: "deneyim3",
           items: [{ content: "deneyim3" }, { content: "deneyim3" }],
-          color: "grey darken-2",
+          color: "deep-orange lighten-2",
         },
       ],
     },
@@ -111,7 +111,7 @@ export default {
         {
           title: "eğitim1",
           items: [{ content: "eğitim1" }, { content: "eğitim1" }],
-          color: "grey darken-2",
+          color: "deep-orange lighten-1",
         },
         {
           title: "eğitim2",
@@ -123,12 +123,12 @@ export default {
               content: "eğitim2",
             },
           ],
-          color: "grey darken-2",
+          color: "deep-orange lighten-1",
         },
         {
           title: "eğitim3",
           items: [{ content: "eğitim3" }, { content: "eğitim3" }],
-          color: "grey darken-2",
+          color: "deep-orange lighten-1",
         },
       ],
     },

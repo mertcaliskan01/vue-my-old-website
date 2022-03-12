@@ -1,15 +1,15 @@
 <template>
   <v-app id="inspire">
     <v-navigation-drawer v-model="drawer" app>
-      <div class="pa-4 deep-orange lighten-1" height="200" align="center" >
-        <v-avatar size="160" >
+      <div class="pa-4 grey lighten-4" height="200" align="center" >
+        <v-avatar size="180" >
           <img src="./assets/image.jpeg" alt="Profile Photo" />
         </v-avatar>
 
-        <div class="white--text text-subtitle-1 font-weight-bold " >
+        <div class="text-subtitle-1 font-weight-bold " >
           MERT ÇALIŞKAN
         </div>
-        <div class="white--text font-weight-bold">Software Engineer</div>
+        <div class="font-weight-bold">Computer Engineer</div>
       </div>
       <v-list-item>
         <v-list-item-content>

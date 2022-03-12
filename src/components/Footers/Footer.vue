@@ -55,7 +55,7 @@ export default {
         icon: "mdi-linkedin",
       },
     ],
-    linkedinURL: "https://www.linkedin.com",
+    linkedinURL: "https://www.linkedin.com/in/mert-%C3%A7ali%C5%9Fkan-0271bb15b/",
   }),
 };
 </script>

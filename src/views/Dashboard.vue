@@ -24,41 +24,17 @@
         <v-col cols="12" md="8">
           <v-card flat>
             <v-card-text>
-              <v-row class="mb-4" align="center">
-                <v-spacer></v-spacer>
-                <v-btn icon>
-                  <v-icon>mdi-account</v-icon>
-                </v-btn>
-              </v-row>
-
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              <h3>
+                Hello, my name is Matt Lemanski. I am the creator of Speaking of English, 
+                a blog for intermediate English learners who want to become more fluent 
+                in the language. I am originally from the United States and I currently 
+                live in Germany. I have been a teacher since 2008, and specialize in 
+                business writing and IELTS preparation. Before becoming a teacher, I 
+                worked as a copyeditor for government agencies in Washington DC and 
+                as a ghostwriter for startup founders and independent consultants 
+                around the world. In my free time, I enjoy hiking, practicing photography, 
+                and exploring the city by bike.
+              </h3>
             </v-card-text>
           </v-card>
         </v-col>
@@ -99,7 +75,7 @@ export default {
         icon: "mdi-linkedin",
       },
     ],
-    linkedinURL: "https://www.linkedin.com",
+    linkedinURL: "https://www.linkedin.com/in/mert-%C3%A7ali%C5%9Fkan-0271bb15b/",
     links: ["Home", "About Us", "Team", "Services", "Blog", "Contact Us"],
 
     experienceModel: {

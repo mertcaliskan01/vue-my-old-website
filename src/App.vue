@@ -1,21 +1,16 @@
 <template>
   <v-app id="inspire">
     <v-navigation-drawer v-model="drawer" app>
-      <v-img
-      class="pa-4"
-        lazy-src="https://picsum.photos/id/11/10/6"
-        gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
-        height="200"
-      src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-      >
-        <v-avatar size="120">
-          <img src="./assets/image.jpeg" alt="Todo" />
+      <div class="pa-4 deep-orange lighten-1" height="200" align="center" >
+        <v-avatar size="160" >
+          <img src="./assets/image.jpeg" alt="Profile Photo" />
         </v-avatar>
 
-        <div class="white--text text-subtitle-1 font-weight-bold">MERT ÇALIŞKAN</div>
-        <div class="white--text text-subtitle-2">Software Developer</div>
-
-      </v-img>
+        <div class="white--text text-subtitle-1 font-weight-bold " >
+          MERT ÇALIŞKAN
+        </div>
+        <div class="white--text font-weight-bold">Software Engineer</div>
+      </div>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-subtitle> Menu </v-list-item-subtitle>
@@ -41,32 +36,28 @@
       app
       src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
       height="100"
+      dark
       prominent
     >
-
-
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-app-bar-title></v-app-bar-title>
+      <v-app-bar-title v-if="!drawer">MERT ÇALIŞKAN</v-app-bar-title>
 
       <v-spacer></v-spacer>
 
       <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
+        <v-icon Large>mdi-download</v-icon>
+        CV
       </v-btn>
 
       <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
+        <v-icon Large>mdi-dots-vertical</v-icon>
       </v-btn>
     </v-app-bar>
 
     <v-main>
       <router-view></router-view>
-      <snackbar/>
+      <snackbar />
     </v-main>
   </v-app>
 </template>
@@ -74,16 +65,16 @@
 <script>
 export default {
   data: () => ({
-    drawer: null,
+    drawer: true,
     items: [
       { title: "Dashboard", icon: "mdi-format-list-checks", to: "/" },
       { title: "About", icon: "mdi-help-box", to: "/about" },
-      { title: "Todo", icon: "mdi-check-circle", to: "/todo" },
+      //{ title: "Todo", icon: "mdi-check-circle", to: "/todo" },
     ],
   }),
-  components:{
-    "snackbar": require("@/components/Shared/Snackbar.vue").default
-  }
+  components: {
+    snackbar: require("@/components/Shared/Snackbar.vue").default,
+  },
 };
 </script>
             

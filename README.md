@@ -1,6 +1,5 @@
-# Todo List Application
+# My old personal website
 
-  - You can access the project online from [link](https://vuetify-todo-app.herokuapp.com/#/).
   
 # Prerequisites
   - Node Modules
@@ -9,7 +8,7 @@
 # Project Setup
 First step, we need to clone backend api repo to your local machine.
 
-     $ git clone https://github.com/mertcaliskan01/vuetify-todo.git
+     $ git clone git@github.com:mertcaliskan01/vue-my-old-website.git
      
 # Run Project
      $ vue ui
@@ -23,7 +22,10 @@ First step, we need to clone backend api repo to your local machine.
   - vue-router: 3.2.0
   - express: 4.17.1
   
-# About me
-Mert Çalışkan
+# Preview
 
-# Thanks for reading.
+
+<img width="1423" alt="Screen Shot 2022-05-16 at 22 30 16" src="https://user-images.githubusercontent.com/47431669/168668583-ea5ccfbc-5796-4e63-a1f6-ba90817dd24c.png">
+
+
+<img width="1431" alt="Screen Shot 2022-05-16 at 22 30 29" src="https://user-images.githubusercontent.com/47431669/168668731-c611f4a3-9f87-4c9c-9bf0-8a8803289a84.png">
